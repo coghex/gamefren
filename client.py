@@ -6,4 +6,4 @@ msg = 'Hello There, I\'m Python\n'
 s.sendall(msg)
 data = s.recv(1024)
 s.close()
-print 'Received:\n', data.decode()
+print('Received:\n', data.decode())
