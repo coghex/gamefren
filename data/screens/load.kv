@@ -1,0 +1,55 @@
+ShowcaseScreen:
+    name: 'Load'
+
+    fullscreen: True
+
+    AnchorLayout:
+        size_hint_x: None
+        size_hint_y: None
+        height: '48dp'
+        width: '800dp'
+        anchor_x: 'right'
+        GridLayout:
+            cols: 2
+            size_hint_x: None
+            size_hint_y: None
+            width: '248dp'
+            height: self.minimum_height
+
+            Button:
+                size_hint_x: None
+                size_hint_y: None
+                width: '124dp'
+                height: '48dp'
+                text: 'load...'
+                on_press: app.kivload()
+            Button:
+                size_hint_x: None
+                size_hint_y: None
+                width: '124dp'
+                height: '48dp'
+                text: 'exit'
+                on_press: app.kivexit()
+
+    Accordion:
+        orientation: 'horizontal'
+
+        AccordionItem:
+            title: 'Elite Dangerous'
+            on_touch_down: app.setgame('elite')
+            Label:
+                text: 'Settings here'
+                text_size: self.width, None
+
+        AccordionItem:
+            title: 'TODO: game'
+            Button:
+                text: 'A button, what else?'
+
+        AccordionItem:
+            title: 'TODO: game'
+            Label:
+                text: 'This is a label fit to the content view'
+                text_size: self.width, None
+
+
